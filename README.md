@@ -36,9 +36,37 @@ At its core, this project embodies two important aims:
 
 1. **Start Your Open Source Journey**: It's aimed to kickstart your open-source journey. Here, you'll learn the basics of Git and get a solid grip on the MERN stack and I strongly believe that learning and building should go hand in hand.
 2. **React Mastery**: Once you've got the basics down, a whole new adventure begins of mastering React. This project covers everything, from simple form validation to advanced performance enhancements. And I've planned much more cool stuff to add in the near future if the project hits more number of contributors.
+## Setting up the project locally
+
+### Setting up the Backend
+
+1. **Fork and Clone the Repository**
+
+   ```bash
+   git clone https://github.com/mpmanthan/coredge.git
+   ```
+2. **Change Some Files**
+   > go to backend/.env.sample && Replace my IP to User IP
+
+   > go to frontend/package.json and **Remove** This line ---- "prepare": "cd .. && npm install" && Change this line "dev": "vite" to this "dev": "vite --host", 
+
+3. **Import sample data**
+
+   > To populate the database with sample posts, you can copy the content from the `backend/data/sample_posts.json` file and insert it as a document in the `wanderlust/posts` collection in your local MongoDB database using either MongoDB Compass or `mongoimport`.
+   ```bash
+   Docker exec -it {mongoDb-containerName} bash
+
+   ```
+
+   ```bash
+   mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray
+   ```
+
 
 _We want you to get the most out of this project—it's all about learning, contributing, and growing in the open-source community._
 <hr>
+
+
 
 <div>
   <h2><img src="https://github.com/Meetjain1/wanderlust/assets/133582566/1ee5934a-27be-4502-a7bf-e6a8c78fe5a3" width="35" height="35"> Features</h2>
